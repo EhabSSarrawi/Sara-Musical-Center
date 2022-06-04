@@ -1,0 +1,137 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #143F6B;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#piano {
+    display: flex;
+}
+
+.key {
+    height: calc(var(--width) * 4);
+    width: var(--width);
+}
+
+.white {
+    --width: 100px;
+    background-color: white;
+    border: 1px solid #333;
+}
+
+.white.active {
+    background-color: #CCC;
+}
+
+.black {
+    --width: 60px;
+    background-color: black;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 2;
+}
+
+.black.active {
+    background-color: #333;
+}
+#button{
+    width: 100px;
+    height: 35px;
+    display: inline;
+    text-align: center;
+    margin-top: 40%;
+    margin-right: 50px;
+    border-color:  white;
+    border-radius: 10px;
+    background-color: #143F6B;
+    color: white;
+    cursor: pointer;
+
+}
+#button:hover{
+    color: black;
+    background-color: white;
+}
+
+#centered{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:white;
+    filter: blur(10px) contrast(20);
+}
+.blob-1,.blob-2{
+    width:70px;
+    height:70px;
+    position:absolute;
+    background:black;
+    border-radius:50%;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+}
+.blob-1{
+    left:20%;
+    animation:osc-l 2.5s ease infinite;
+}
+.blob-2{
+    left:80%;
+    animation:osc-r 2.5s ease infinite;
+    background:#0ff;
+}
+
+
+@keyframes square-in-bottom-right {
+    from {
+        clip-path: inset(0 100% 100% 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+#Frame{
+    background-color: #4CAF50;
+    animation: square-in-bottom-right 2.5s cubic-bezier(.25, 1, .30, 1)  both;
+
+}
+@keyframes osc-l{
+    0%{left:20%;}
+    50%{left:50%;}
+    100%{left:20%;}
+}
+@keyframes osc-r{
+    0%{left:80%;}
+    50%{left:50%;}
+    100%{left:80%;}
+}
+
+@media (max-width: 600px) {
+    #piano{
+        margin-left: 8%;
+    }
+    #piano .white{
+        --width: 60px;
+    }
+    #piano .black{
+        --width: 40px;
+        margin-left: calc(var(--width) / -2);
+        margin-right: calc(var(--width) / -2);
+        z-index: 2;
+    }
+    #button{
+        flex-direction: row;
+        margin-right: auto;
+        margin-left: -100px;
+        margin-top: 100%;
+    }
+}
