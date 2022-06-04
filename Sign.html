@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><Music Center></title>
+    <link rel="stylesheet" href="CSS/sign.css">
+</head>
+<body>
+
+
+<div class="container" id="container">
+    <div class="form-container sign-up-container">
+
+        <form action="">
+            <h1>Create Account</h1>
+            <input type="text" name="name" placeholder="Name">
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Password">
+            <input type="Con-password" name="Con-password" placeholder="Confirm password">
+            <input type="date" name="date" id="date">
+            <div class="radio-container">
+                <input type="radio" id="Male" name="os" />
+                <label for="Male">Male</label>
+                <input type="radio" id="Female" name="os" />
+                <label for="Female">Female</label>
+            </div>
+            <input type="text" name="address" placeholder="Address"><br>
+            <button>SignUp</button>
+        </form>
+    </div>
+    <div class="form-container sign-in-container">
+        <form action="#">
+            <h1>Sign In</h1>
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Password" id="myInput">
+            <span id="simg"><img src="img/eye.png" id="eye"  onclick="myFunction()"></span>
+            <input type="checkbox" onclick="RememberMe()" id="Cremember"><span id="Remember">Remember me</span><br><br>
+            <a href="javascript: void(0)" onclick="window.open('Forget.html','Warning','width=450, height=450, top=180%, left=550%')">Forgot Your Password?</a>
+
+            <button>Sign In</button>
+        </form>
+    </div>
+
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>To keep connected with us please login with your personal info</p>
+                <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Sara Musical Center</h1>
+                <p>Enter your details and start journey with us</p>
+                <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="JavaScript/Sign.js">
+</script>
+
+
+</body>
+</html>

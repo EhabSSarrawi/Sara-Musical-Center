@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Memory Game</title>
+
+    <link rel="stylesheet" href="CSS/Memory_Game.css">
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+<section class="memory-game" id="memory" style="display: none">
+    <div class="memory-card" data-framework="Piano">
+        <img class="front-face" src="img/icon_Piano.png" alt="Piano" />
+        <img class="back-face" src="img/ce.jpg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="Piano">
+        <img class="front-face" src="img/icon_Piano.png" alt="Piano" />
+        <img class="back-face" src="img/ce.jpg" alt="JS Badge" />
+    </div>
+
+    <div class="memory-card" data-framework="Violin">
+        <img class="front-face" src="img/icon_Violin.png" alt="Violin" />
+        <img class="back-face" src="img/ce.jpg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="Violin">
+        <img class="front-face" src="img/icon_Violin.png" alt="Violin" />
+        <img class="back-face" src="img/ce.jpg" alt="JS Badge" />
+    </div>
+
+    <div class="memory-card" data-framework="Guitar">
+        <img class="front-face" src="img/icon_guitar.png" alt="Guitar" />
+        <img class="back-face" src="img/ce.jpg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="Guitar">
+        <img class="front-face" src="img/icon_guitar.png" alt="Guitar" />
+        <img class="back-face" src="img/ce.jpg" alt="JS Badge" />
+    </div>
+
+    <div class="memory-card" data-framework="Mic">
+        <img class="front-face" src="img/icon_mic.png" alt="Mic" />
+        <img class="back-face" src="img/ce.jpg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="Mic">
+        <img class="front-face" src="img/icon_mic.png" alt="Mic" />
+        <img class="back-face" src="img/ce.jpg" alt="JS Badge" />
+    </div>
+
+    <div class="memory-card" data-framework="Oud">
+        <img class="front-face" src="img/icon_oud.png" alt="Oud" />
+        <img class="back-face" src="img/ce.jpg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="Oud">
+        <img class="front-face" src="img/icon_oud.png" alt="Oud" />
+        <img class="back-face" src="img/ce.jpg" alt="JS Badge" />
+    </div>
+
+    <div class="memory-card" data-framework="Zither">
+        <img class="front-face" src="img/icon_zither.png" alt="Zither" />
+        <img class="back-face" src="img/ce.jpg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="Zither">
+        <img class="front-face" src="img/icon_zither.png" alt="Zither" />
+        <img class="back-face" src="img/ce.jpg" alt="JS Badge" />
+    </div>
+
+</section>
+<button id="button" onclick="window.location.reload();" style="display: none">Reset</button>
+<button id="button1" onclick="history.back()" style="display: none">Back</button>
+<div id="wrapper1">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="shadow"></div>
+    <div class="shadow"></div>
+    <div class="shadow"></div>
+    <span>Loading</span>
+</div>
+<script src="JavaScript/Memory_Game.js"></script>
+<script type="text/javascript">
+    let myVar;
+
+    function myFunction() {
+        myVar = setTimeout(showPage, 2000);
+
+    }
+
+    function showPage() {
+        document.getElementById('wrapper1').style.display='none';
+        document.getElementById('memory').style.display = "flex";
+        document.getElementById('button').style.display = 'inline';
+        document.getElementById('button1').style.display = 'inline';
+
+
+    }
+</script>
+</body>
+</html>

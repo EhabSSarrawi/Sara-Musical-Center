@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="CSS/XO_Game.css">
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+
+<h1 id="H" style="text-align: center; font-size: 40px ;display: none"><span>T</span>ic <span style="color: darkturquoise " >T</span>ac <span>T</span>oe</h1>
+<br><br><br><br><br><br>
+<div class="board" id="board" style="display: none">
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+</div>
+<div class="winning-message" id="winningMessage">
+    <div data-winning-message-text></div>
+    <button id="restartButton">Restart</button>
+    <button  id="Back" onclick="history.back()">Back</button>
+</div>
+
+<div id="wrapper1">
+    <div class="circle1" ></div>
+    <div class="circle1" ></div>
+    <div class="circle1" ></div>
+    <div class="shadow"></div>
+    <div class="shadow"></div>
+    <div class="shadow"></div>
+    <span>Loading</span>
+</div>
+<script src="JavaScript/XO_Gama.js"></script>
+<script type="text/javascript">
+    let myVar;
+
+    function myFunction() {
+        myVar = setTimeout(showPage, 2000);
+
+    }
+
+    function showPage() {
+        document.getElementById('wrapper1').style.display='none';
+        document.getElementById('H').style.display="block";
+        document.getElementById('board').style.display = "grid";
+
+
+
+    }
+</script>
+</body>
+
+</html>
